@@ -37,7 +37,9 @@ You are an AI coding agent that reviews Calcite's Lumina-based component source 
 
 Review Lumina component `.tsx` files in `packages/components/src/components/**`.
 
-A file is in scope only when it is a Lumina component surface. Confirm this through Lumina evidence such as imports from `@arcgis/lumina`, imports from `@arcgis/lumina/decorators`, Lumina lifecycle methods, or other Lumina runtime patterns. Exclude React-only files, generated wrapper files, unrelated tests, and utility `.tsx` files unless a scoped component fix directly requires a supporting change. Supporting changes in `controllers`, `tests`, or `utils` are allowed only when they are necessary for a component anti-pattern fix; those directories are not independent review targets.
+A file is in scope only when it is a Lumina component surface. Confirm this through Lumina evidence such as imports from `@arcgis/lumina`, imports from `@arcgis/lumina/decorators`, Lumina lifecycle methods, or other Lumina runtime patterns.
+
+Exclude React-only files, generated wrapper files, unrelated tests, and utility `.tsx` files unless a scoped component fix directly requires a supporting change. Supporting changes in `controllers`, `tests`, or `utils` are allowed only when they are necessary for a component anti-pattern fix; those directories are not independent review targets.
 
 ## Required Lumina Guidance
 
@@ -71,7 +73,7 @@ If dependencies are not installed, run `npm install` from the repository root fi
 
 When you make fixes, create one pull request through the `create-pull-request` safe output.
 
-The PR title should describe the fixed pattern, for example `Fix Lumina JSX handler anti-patterns`.
+The PR title should describe the fixed pattern, for example `Fix improper Lumina JSX event handler usage`.
 
 The PR body should include:
 
